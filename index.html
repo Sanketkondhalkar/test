@@ -1,0 +1,915 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Hello, world!</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap');
+   body{
+    /* margin-top:20px; */
+    background:#eee;
+}
+.card::after {
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: 35px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 19px 28px 5px rgba(64,64,64,0.09);
+    box-shadow: 0 19px 28px 5px rgba(64,64,64,0.09);
+    content: '';
+    z-index: -1;
+}
+a.card {
+    text-decoration: none;
+}
+
+.card {
+    position: relative;
+    border: 0;
+    border-radius: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 12px 20px 1px rgba(64,64,64,0.09);
+    box-shadow: 0 12px 20px 1px rgba(64,64,64,0.09);
+}
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,0.125);
+    border-radius: .25rem;
+}
+
+.box-shadow {
+    -webkit-box-shadow: 0 12px 20px 1px rgba(64,64,64,0.09) !important;
+    box-shadow: 0 12px 20px 1px rgba(64,64,64,0.09) !important;
+}
+
+.ml-auto, .mx-auto {
+    margin-left: auto !important;
+}
+.mr-auto, .mx-auto {
+    margin-right: auto !important;
+}
+.rounded-circle {
+    border-radius: 50% !important;
+}
+.bg-white {
+    background-color: #fff !important;
+}
+
+.ml-auto, .mx-auto {
+    margin-left: auto !important;
+}
+
+.mr-auto, .mx-auto {
+    margin-right: auto !important;
+}
+.d-block {
+    display: block !important;
+}
+img, figure {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.card-text {
+    padding-top: 12px;
+    color: #8c8c8c;
+}
+
+.text-sm {
+    font-size: 12px !important;
+}
+p, .p {
+    margin: 0 0 16px;
+}
+
+.card-title {
+    margin: 0;
+    font-family: "Montserrat",sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.pt-1, .py-1 {
+    padding-top: .25rem !important;
+}
+
+.head-icon{
+    margin-top:18px;
+    color:#FF4500
+}
+/* body {
+    margin: 0;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: .8125rem;
+    font-weight: 400;
+    line-height: 1.5385;
+    color: #333;
+    text-align: left;
+    background-color: #f5f5f5
+} */
+
+.mt-100 {
+    margin-top: 100px
+}
+
+.book {
+    color: #66bb6a
+}
+
+.bg-success-400 {
+    background-color: #66bb6a
+}
+
+[class*=bg-]:not(.bg-transparent):not(.bg-light):not(.bg-white):not(.btn-outline):not(body) {
+    color: #fff
+}
+
+.btn {
+    position: relative
+}
+
+.border-warning-400 {
+    border-color: #ff7043
+}
+
+.facebook {
+    color: #3b5998
+}
+
+.google {
+    color: #dc4e41
+}
+
+.linkedin {
+    color: #0077b5
+}
+
+.twitter {
+    color: #55acee
+}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Rubik:300,400,500,700,900');
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    /* background: #a0a0a0; */
+    color: #000000;
+    /* margin-top: 100px */
+}
+
+div {
+    display: block;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 0px
+}
+
+p {
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    font-weight: 400;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px
+}
+
+a {
+    text-decoration: none !important
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px
+}
+
+.button {
+    display: inline-block;
+    background: #0e8ce4;
+    border-radius: 5px;
+    height: 48px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease
+}
+
+.button a {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 48px;
+    color: #FFFFFF;
+    padding-left: 35px;
+    padding-right: 35px
+}
+
+.button:hover {
+    opacity: 0.8
+}
+
+.newsletter {
+    background: #fafafa;
+    padding-top: 66px;
+    padding-bottom: 60px;
+    margin-right: 20px !important;
+    margin-left: 20px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1)
+}
+
+.bbb_newsletter_container {
+    width: 100%
+}
+
+.bbb_newsletter_title_container {
+    width: 40%;
+    padding-left: 95px
+}
+
+.bbb_newsletter_icon {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0
+}
+
+.bbb_newsletter_title {
+    font-size: 18px;
+    color: #000000
+}
+
+.bbb_newsletter_text p:last-child {
+    margin-bottom: 0
+}
+
+.bbb_newsletter_icon img {
+    max-width: 100%
+}
+
+.bbb_newsletter_content {
+    width: 60%
+}
+
+.bbb_newsletter_form {
+    position: relative;
+    width: 569px;
+    float: left
+}
+
+.bbb_newsletter_input {
+    width: 100%;
+    height: 50px;
+    background: #FFFFFF;
+    border: solid 1px #e5e5e5;
+    border-radius: 5px;
+    padding-left: 25px;
+    font-size: 16px;
+    outline: none;
+    color: #0e8ce4
+}
+
+.bbb_newsletter_input:focus {
+    border: solid 1px rgba(14, 140, 228, 0.3);
+    box-shadow: 0px 1px 5px rgba(14, 140, 228, 0.3)
+}
+
+.bbb_newsletter_input::-webkit-input-placeholder {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.3)
+}
+
+.bbb_newsletter_input:-moz-placeholder {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.3)
+}
+
+.bbb_newsletter_input::-moz-placeholder {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.3)
+}
+
+.bbb_newsletter_input:-ms-input-placeholder {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.3)
+}
+
+.bbb_newsletter_input::input-placeholder {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.3)
+}
+
+.bbb_newsletter_button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 153px;
+    height: 50px;
+    background: #0e8ce4;
+    /* color: #FFFFFF; */
+    line-height: 50px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer
+}
+
+.bbb_newsletter_button:hover {
+    opacity: 0.8
+}
+
+.bbb_newsletter_unsubscribe_link {
+    float: right;
+    text-align: right;
+    height: 50px
+}
+
+.bbb_newsletter_unsubscribe_link a {
+    font-size: 10px;
+    color: #0e8ce4;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 50px
+}
+
+.bbb_newsletter_unsubscribe_link a:hover {
+    color: #0d82d3
+}
+
+@media only screen and (max-width: 1199px) {
+    .bbb_newsletter_form {
+        width: 456px
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .bbb_newsletter_title_container {
+        width: 100%
+    }
+
+    .bbb_newsletter_content {
+        width: 100%;
+        margin-top: 30px
+    }
+
+    .bbb_newsletter_form {
+        width: calc(100% - 114px)
+    }
+
+    .footer_col:not(:last-child) {
+        margin-bottom: 40px
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    h2 {
+        font-size: 24px
+    }
+
+    p {
+        font-size: 13px
+    }
+
+    .bbb_newsletter_form {
+        float: none;
+        width: 100%
+    }
+
+    .bbb_newsletter_title_container {
+        padding-left: 0px;
+        text-align: center
+    }
+
+    .bbb_newsletter_unsubscribe_link {
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+        height: auto
+    }
+
+    .bbb_newsletter_unsubscribe_link a {
+        line-height: 1
+    }
+
+    .bbb_newsletter_title {
+        font-size: 16px
+    }
+
+    .bbb_newsletter_icon {
+        position: relative;
+        width: 40px;
+        top: auto;
+        -webkit-transform: translate(-50%, 0px);
+        -moz-transform: translate(-50%, 0px);
+        -ms-transform: translate(-50%, 0px);
+        -o-transform: translate(-50%, 0px);
+        transform: translate(-50%, 0px);
+        left: 50%;
+        margin-bottom: 20px
+    }
+
+    .bbb_newsletter_button {
+        position: relative;
+        top: auto;
+        right: auto;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 113px;
+        height: 40px;
+        background: #0e8ce4;
+        color: #FFFFFF;
+        line-height: 40px;
+        font-size: 12px;
+        border: none;
+        outline: none;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px
+    }
+
+    .bbb_newsletter_input {
+        font-size: 13px;
+        padding-left: 15px;
+        height: 40px;
+        line-height: 40px
+    }
+
+    .bbb_newsletter_input::-webkit-input-placeholder {
+        font-size: 13px
+    }
+
+    .bbb_newsletter_input:-moz-placeholder {
+        font-size: 13px
+    }
+
+    .bbb_newsletter_input::-moz-placeholder {
+        font-size: 13px
+    }
+
+    .bbb_newsletter_input:-ms-input-placeholder {
+        font-size: 13px
+    }
+
+    .bbb_newsletter_input::input-placeholder {
+        font-size: 13px
+    }
+}
+/* .btn{
+  margin-left: 50%;
+} */
+
+    </style>
+  </head>
+  <body>
+  
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="logo.jpg" alt=" logo " width="100" height="50"></a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="contact.html">Contact us</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+              
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- slide image -->
+      <img src="1610427385590.jpg" class="img-fluid" alt="..." width="100%"  style="height:700px;"/>
+      <!-- services -->
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<section class="container pt-3 mb-3">
+    <h2 class="h3 block-title text-center" ><h1 style="text-align: center;text-shadow: 2px 2px 5px red; font-family: 'Baloo Bhai 2', cursive;"> Our Services </h1></h2>
+    <div class="row pt-5 mt-30">
+        <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+            <a class="card" href="#">
+                <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-user fa-3x head-icon"></i></div>
+                <div class="card-body text-center">
+                    <h3 class="card-title pt-1">WEB DESIGN</h3>
+                    <p class="card-text text-sm">Avoid hiring a professional and create a beautiful website on your own with easy drag & drop capabilities, and build a strong online presence for your institution.</p><span class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i class="fe-icon-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+            <a class="card" href="#">
+                <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-user-circle-o fa-3x head-icon"></i></div>
+                <div class="card-body text-center">
+                    <h3 class="card-title pt-1">Web &amp; UI Design</h3>
+                    <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p><span class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i class="fe-icon-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+            <a class="card" href="#">
+                <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-address-book fa-3x head-icon"></i></div>
+                <div class="card-body text-center">
+                    <h3 class="card-title pt-1">Front-End Development</h3>
+                    <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p><span class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i class="fe-icon-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+            <a class="card" href="#">
+                <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-car fa-3x head-icon"></i></div>
+                <div class="card-body text-center">
+                    <h3 class="card-title pt-1">Back-End Development</h3>
+                    <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p><span class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i class="fe-icon-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+            <a class="card" href="#">
+                <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-camera fa-3x head-icon"></i></div>
+                <div class="card-body text-center">
+                    <h3 class="card-title pt-1">Usability Testing</h3>
+                    <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p><span class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i class="fe-icon-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+            <a class="card" href="#">
+                <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-image fa-3x head-icon"></i></div>
+                <div class="card-body text-center">
+                    <h3 class="card-title pt-1">SEO Optimization</h3>
+                    <p class="card-text text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p><span class="text-sm text-uppercase font-weight-bold">Learn More&nbsp;<i class="fe-icon-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- end of the -->
+<br><br>
+<div class="can">
+  <h1 style="text-align: center; text-shadow: 2px 2px 5px red;font-family: 'Baloo Bhai 2', cursive;">Our Vision</h1>
+<div class="card">
+  <h5 class="card-header" style="text-align: center; font-size: 30px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" ></h5>
+  <div class="card-body">
+    <p class="card-text" style="text-align: center; font-size: 30px;" >To improve access to learning for everyone using technology</p>
+   
+  </div>
+</div>
+</div>
+
+<!-- What is the problem we are solving -->
+<br>
+<br>
+<div class="container">
+  <h1 style="text-align:center; text-shadow: 2px 2px 5px red;font-family: 'Baloo Bhai 2', cursive;">What is the problem we are solving</h1>
+  <div class="card ">
+    <div class="card-header">
+      <h3><b style="color: cadetblue;">  Educational Institutes</b></h3>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <p class="card-text">
+        1.Apart from big players, small players work on very thin margins to operate their institutes. <br>
+        2.Hence when it comes to technology, even after knowing its beneﬁts, they lack investment capability and technology know-how to implement the same and reap beneﬁts. <br>
+        3.Multiple tools for managing Increases cost of managing diﬀerent tools and reduces eﬃciencies. Integration between diﬀerent tools are also not easy. <br>
+        4.Not able to analyse student’s performance and thereby a teacher’s eﬃciency. <br>
+        5.Increase reach out to new students.
+      </p>
+      <a href="services.html" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="card-footer text-muted">
+      
+    </div>
+
+      <br>
+    <div class="card ">
+      <div class="card-header">
+        <h3><b style="color: cadetblue;">Teachers of these Institutes</b></h3>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">
+          1.Most of the teachers using blackboard to explain In such cases sharing, storing and managing their classroom notes becomes tedious. <br>
+          2.They spend lot of time evaluating physical answer sheet of students instead of focusing on student learning <br>
+          3.During a class session, they are unable to quickly identify if students have understood the concept or not <br>
+          4.Not able to track student performance with detailed insights <br>
+               </p>
+        <a href="services.html" class="btn btn-primary">Go somewhere</a>
+      </div>
+      <div class="card-footer text-muted">
+      
+      </div>
+    </div>
+
+    <div class="card ">
+      <div class="card-header">
+        <h3><b style="color: cadetblue;"> Students of these Institutes</b></h3>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">
+          1.They spend maximum time of classroom in copying what teacher has written on the board rather than spending time in understanding the <br>
+          2.In case they miss a class or 2, have to depend on other students for notes and concept clearance
+          . <br>
+               </p>
+        <a href="services.html" class="btn btn-primary">Go somewhere</a>
+      </div>
+      <div class="card-footer text-muted">
+        
+      </div>
+    </div>
+
+
+</div>
+<!-- uniqueness -->
+<br>
+<br>
+<div class="container">
+  <h1 style="text-align:center; text-shadow: 2px 2px 5px red;font-family: 'Baloo Bhai 2', cursive;">The uniqueness of our solution</h1>
+  <div class="card ">
+    <div class="card-header">
+      <h3><b style="color: cadetblue;"> solution </b></h3>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <p class="card-text">
+       <ul>
+         <li>Enquiry Management</li>
+         <li>Sales Team Management</li>
+         <li>Customer Care & Ticketing system</li>
+         <li>Institute Website creation & management tool</li>
+         <li>Staﬀ and Student Attendance Management</li>
+         <li>Biometric attendance system</li>
+       </ul>
+      </p>
+      <a href="services.html" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="card-footer text-muted">
+      
+    </div>
+
+      <br>
+    <div class="card ">
+      <div class="card-header">
+        <h3><b style="color: cadetblue;">Invoice & Expense Tracking and Management</b></h3>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">
+         <ul>
+           <li>Automated payment reminders to students</li>
+           <li>Staﬀ salary disbursal system</li>
+           <li>Current P&L statement for month, year Expense tracking</li>
+           <li>Online assessment tool</li>
+           <li>Question Bank Management System</li>
+           <li>Mock Test Platform for students to practise for various exams
+          </li>
+           <li>Analytic Reporting System</li>
+           <li>SMS & Email Campaign Module (Marketing Tool)</li>
+           <li>Mobile application for students to access course content of the Coaching Institute</li>
+           <li>Learning management System</li>
+        </ul>
+               </p>
+        <a href="services.html" class="btn btn-primary" >Go somewhere
+          
+        </a>
+      </div>
+      <div class="card-footer text-muted">
+      
+      </div>
+    </div>
+
+    
+
+
+</div>
+
+<!-- testnomial -->
+<div class="container">
+  <br><br><br>
+  <h1 style="text-align: center; text-shadow: 2px 2px 5px red;font-family: 'Baloo Bhai 2', cursive;">Our Team</h1>
+
+<div class="container-fluid d-flex justify-content-center mt-100">
+  <div class="row">
+      <div class="col-lg-4">
+          <div class="card">
+              <div class="card-body text-center"> <img src="manik.png" class="rounded-circle" width="200" height="200">
+                  <h5 class="card-title mt-2 mb-1">MANIK KASHYAP</h5> <span class="fs-2 mb-3 font-weight-bold"></span>
+                  <p class="mb-3 mt-3" style="color: black; font-family: 'Times New Roman', Times, serif;">"Self-made Entrepreneur with over 10 years of experience in managing online/oﬄine examinations. Life-long Learner, Talented Liasioner"</p>
+                  <ul class="list-inline">
+                      <li class="list-inline-item"><a><i class="fa fa-facebook fa-2x facebook"></i></a></li>
+                      <li class="list-inline-item"><a><i class="fa fa-twitter fa-2x twitter"></i></a></li>
+                      <li class="list-inline-item"><a><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                      <li class="list-inline-item"><a><i class="fa fa-google fa-2x google"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-4">
+          <div class="card">
+              <div class="card-body text-center"> <img src="ankit.png" class="rounded-circle" width="200" height="200">
+                  <h5 class="card-title mt-2 mb-1">ANKIT BANSAL</h5> <span class="fs-2 mb-3 font-weight-bold"></span>
+                  <p class="mb-3 mt-3"style="color: black; font-family: 'Times New Roman', Times, serif;" >"IIT -IIM Graduate with 13 years of multi-domain experience. Held National Head roles in multiple companies. Managed more than 100 Cr worth of businesses."</p>
+                  <ul class="list-inline">
+                      <li class="list-inline-item"><a><i class="fa fa-facebook fa-2x facebook"></i></a></li>
+                      <li class="list-inline-item"><a><i class="fa fa-twitter fa-2x twitter"></i></a></li>
+                      <li class="list-inline-item"><a><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                      <li class="list-inline-item"><a><i class="fa fa-google fa-2x google"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-4">
+          <div class="card">
+              <div class="card-body text-center"> <img src="indu.png" class="rounded-circle" width="200" height="200">
+                  <h5 class="card-title mt-2 mb-1">INDU KASHYAP</h5> <span class="fs-2 mb-3 font-weight-bold"></span>
+                  <p class="mb-3 mt-3" style="color: black; font-family: 'Times New Roman', Times, serif;">"Successful Businesswoman, who provides safe harbour for the core team by leveraging her 7 years of experience in Entrepreneurship. She manages the Human Resources and the creative department"</p>
+                  <ul class="list-inline">
+                      <li class="list-inline-item"><a><i class="fa fa-facebook fa-2x facebook"></i></a></li>
+                      <li class="list-inline-item"><a><i class="fa fa-twitter fa-2x twitter"></i></a></li>
+                      <li class="list-inline-item"><a><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                      <li class="list-inline-item"><a><i class="fa fa-google fa-2x google"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+</div>
+<!-- our misssion -->
+
+<br><br>
+<div class="can">
+  <h1 style="text-align: center; text-shadow: 2px 2px 5px red;font-family: 'Baloo Bhai 2', cursive;">Our Mission</h1>
+<div class="card">
+  <h5 class="card-header" style="text-align: center; font-size: 30px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" ></h5>
+  <div class="card-body">
+    <p class="card-text" style="text-align: center; font-size: 30px;" >To build foolproof solutions for Academicinstitutions by leveraging best technology and increase its adoption among stakeholders</p>
+   
+  </div>
+</div>
+</div>
+<!--subscribe -->
+<br>
+<br>
+<div class="newsletter">
+  <div class="container">
+      <div class="row">
+          <div class="col">
+              <div class="bbb_newsletter_container d-flex flex-lg-row flex-column align-items-lg-center align-items-center justify-content-lg-start justify-content-center">
+                  <div class="bbb_newsletter_title_container">
+                      <div class="bbb_newsletter_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560999634/send.png" alt=""></div>
+                      <div class="bbb_newsletter_title">Sign up for Newsletter</div>
+                      <div class="bbb_newsletter_text">
+                          <!-- <p>...and receive %20 coupon for first shopping.</p> -->
+                      </div>
+                  </div>
+                  <div class="bbb_newsletter_content clearfix">
+                      <form action="#" class="bbb_newsletter_form"> <input type="email" class="bbb_newsletter_input" required="required" placeholder="Enter your email address"> <button class="bbb_newsletter_button">Subscribe</button> </form>
+                      <div class="bbb_newsletter_unsubscribe_link"><a href="#">unsubscribe</a></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- footer -->
+<footer class="footer-distributed">
+
+  <div class="footer-left">
+      <img src="logo.jpg">
+
+    <h3>About<span>Eduvue Tech</span></h3>
+
+    
+
+    <p class="footer-company-name">© 2020 Eduvue technology Pvt. Ltd.</p>
+  </div>
+
+  <div class="footer-center">
+    <div>
+      <i class="fa fa-map-marker"></i>
+        <p><span>309 - Rupa Solitaire,
+         Bldg. No. A - 1, Sector - 1</span>
+        Mahape, Navi Mumbai - 400710</p>
+    </div>
+
+    <div>
+      <i class="fa fa-phone"></i>
+      <p>+91 22-27782183</p>
+    </div>
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="mailto:support@eduonix.com">support@eduvuetech.com</a></p>
+    </div>
+  </div>
+  <div class="footer-right">
+    <p class="footer-company-about">
+      <span>About the company</span>
+      Eduvue is CMM Level 5 certiﬁed technology company. it provides Technology to Academic institutions to convert their oﬄine business to Online.</p>
+    <div class="footer-icons">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+
+
+
+
+     
+        
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+      
+  
+  
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
